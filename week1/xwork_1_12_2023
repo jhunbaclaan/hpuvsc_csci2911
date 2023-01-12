@@ -1,0 +1,14 @@
+/*
+ * a program that intends to... idk
+ * author: jhun baclaan
+ * date of creation: jan. 11, 2023
+ */
+import java.util.*; // intended for scanner
+public class test
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String 
+    }
+}
