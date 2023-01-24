@@ -18,11 +18,15 @@ public class assignment_1_24_2023 {
         Scanner sc = new Scanner(System.in);
         String chip;
         int numericalInput;
+        /*
+         * these variables change depending on the data given from instructions
+         * please see the data table in the instructions for why certain values are assigned to these variables
+         */
         double numberEaten, chipsInBag, servings, caloriesPerServing, caloriesPerChip, totalCalories;
 
         // populate arraylist
-        chipList.add("Taro");
-        chipList.add("Poi");
+        chipList.add("Taro"); // element 0
+        chipList.add("Poi"); // element 1, and so on...
         chipList.add("Ube");
 
         // run
@@ -34,6 +38,7 @@ public class assignment_1_24_2023 {
         System.out.println("4. Exit");
         System.out.print("select the type of chip you have eaten (1 for Taro, 2 for Poi, 3 for Ube, and 4 to Exit) ");
         numericalInput = sc.nextInt();
+
         // input validation (taken from lab 2)
         while ((!(numericalInput >= 1) || !(numericalInput <= 4)))
         {
@@ -42,7 +47,7 @@ public class assignment_1_24_2023 {
         }
         if (numericalInput == 1) // taro
         {
-            chip = chipList.get(0);
+            chip = chipList.get(0); // takes the type of chip (the element) from the corresponding index of chipList
             chipsInBag = 150;
             servings = 10;
             caloriesPerServing = 360;
@@ -65,6 +70,10 @@ public class assignment_1_24_2023 {
             numberEaten = sc.nextInt();
             caloriesPerChip = (caloriesPerServing / (chipsInBag / servings));
             totalCalories = caloriesPerChip * numberEaten;
+            /*
+             * this will just show info of the chip type
+             * type of chip & calorie per chip value
+             */
             System.out.println("type of chip selected: " + chip);
             System.out.println("one chip contains " + caloriesPerChip + " calories.");
             System.out.println("you have consumed: " + totalCalories + " calories.");
