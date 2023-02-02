@@ -10,9 +10,9 @@ public class classwork_2_2_2023 {
     {
         // similar to creating an arraylist, but in a file
         PrintWriter fileOut = new PrintWriter("Names.txt");
-        fileOut.println("Chris"); // add an element in line 0
-        fileOut.println("Kathryn");
-        fileOut.print("Jean");
+        fileOut.println(4.32); // add an element in line 0
+        fileOut.println(6.32);
+        fileOut.print(4921.34);
         fileOut.close();
 
         // opens file to read
@@ -20,10 +20,12 @@ public class classwork_2_2_2023 {
         Scanner fileIn = new Scanner(file);
 
         // iterate through all file lines
-        while (fileIn.hasNextLine())
+        while (fileIn.hasNext())
         {
-            String str = fileIn.nextLine();
-            System.out.println(str);
+            double number = fileIn.nextDouble();
+            System.out.println(number);
+            double upPrice = number * 1.1;
+            System.out.printf("if price goes up by 10 percent, you pay $%.2f\n\n", upPrice);
         }
 
         fileIn.close();
