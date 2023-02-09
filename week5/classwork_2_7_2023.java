@@ -9,13 +9,14 @@ public class classwork_2_7_2023 {
     {
         Scanner sc = new Scanner(System.in);
 
-        //saySomethingFunny();
+        testAverage(90.35, 34, 76.4);
+        saySomethingFunny();
         showMenu();
-        //String studentName = "Susie";
-        //greeting(studentName);
-        //greeting("Bob");
-        //greetingNameAge("Tom", 8);
-        //doubleUp(44, 25);
+        String studentName = "Susie";
+        greeting(studentName);
+        greeting("Bob");
+        greetingNameAge("Tom", 8);
+        doubleUp(44, 25);
 
         System.out.print("how many hours have you worked this week? ");
         double hours = sc.nextDouble();
@@ -59,5 +60,11 @@ public class classwork_2_7_2023 {
         double pay = hoursWorked * hourlyRate;
         System.out.println("You have worked " + hoursWorked + " hours, at a rate of $" + hourlyRate + " per hour.");
         System.out.println("Your gross pay is $" + pay);
+    }
+
+    public static void testAverage(double score1, double score2, double score3)
+    {
+        double average = (score1+score2+score3)/3;
+        System.out.println("Average test score: " + average);
     }
 }
