@@ -2,6 +2,7 @@ package week13.arraylist_program;
 
 import java.util.*;
 public class Program {
+    // made arraylist private static to prevent any problems with my methods
     private static ArrayList<String> names = new ArrayList<String>();
     public Program()
     {
@@ -73,6 +74,11 @@ public class Program {
 
         }
     }
+    /*
+     * adds names by asking the user how many names they want to input (stored in amount)
+     * then asking for input for every name they want to input
+     * input validation via try catch 
+     */
     public static void addNames(Scanner sc, final ArrayList<String> names)
     {
         int amount = 0;
